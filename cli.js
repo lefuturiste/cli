@@ -21,7 +21,7 @@ const helpMessage = `
         --no-digits         remove digits from password
         --no-symbols        remove symbols from password
 
-        --length, -L        int (default 16)
+        --length, -L        int (default 20)
         --counter, -c       int (default 1)
 
         --clipboard, -C     copy generated password to clipboard rather than displaying it.
@@ -114,8 +114,8 @@ const passwordProfile = {
   uppercase: uppercase,
   symbols: symbols,
   numbers: digits,
-  clipboard: cli.flags.clipboard || false,
-  length: cli.flags.length || 16,
+  clipboard: cli.flags.clipboard || true,
+  length: cli.flags.length || 20,
   counter: cli.flags.counter || 1
 };
 
